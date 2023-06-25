@@ -1,43 +1,14 @@
-<script src="https://kit.fontawesome.com/2d81efc77e.js" crossorigin="anonymous"></script>
-
-<h2>User info</h2>
-  <div>
-
-  <%= image_tag @user.get_profile_image(100,100) %>
-  <table>
-    <tbody>
-      <tr>
-       <th>Name</th>
-       <th><%= @user.name %></th>
-      </tr>
-
-      <tr>
-       <th>introduction</th>
-       <th><%= @user.introduction %></th>
-      </tr>
-   </tbody>
-  </table>
-</div>
-
-<%= link_to edit_user_path(@user.id) do %>
-  <i class="fa-solid fa-user-gear"></i>
-<% end %>
 
 
+<div class="container px-5 px-sm-0">
+  <div class="row">
+<%= render 'books/name', {user: @user, book: @book} %>
 
 
-<h2>New book</h2>
-  <%= form_with model: @book do |f| %>
-    <h4>Title</h4>
-      <%= f.text_field :title %>
-    <h4>opinion</h4>
-      <%= f.text_area :body %><br>
-    <%= f.submit 'Create Book' %>
-  <% end %>
-
-<table>
+<div class="col-md-8 offset-md-1">
+  <h2>Users</h2>
+<table class="table">
    <thead>
-     <h2>Books</h2>
      <tr>
      <th>image</th>
      <th>name</th>
@@ -57,3 +28,6 @@
 
 </tbody>
 </table>
+</div>
+</div>
+</div>
