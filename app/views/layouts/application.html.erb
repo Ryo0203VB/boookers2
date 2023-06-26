@@ -28,7 +28,7 @@
             <% if user_signed_in? %>
             <li class="nav-item">
               <%= link_to user_path(id: current_user), class: 'nav-link text-light' do %>
-               <i class="fa-solid fa-house-chimney"></i>
+               <i class="fas fa-home"></i>
                Home
               <% end %>
             </li>
@@ -46,7 +46,7 @@
             </li>
             <li class="nav-item">
               <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light', class: 'nav-link text-light' do %>
-               <i class="fa-solid fa-right-from-bracket"></i>
+               <i class="fas fa-sign-out-alt"></i>
                Log out
               <% end %>
             </li>
@@ -55,7 +55,7 @@
 
             <li class="nav-item">
               <%= link_to root_path, class: 'nav-link text-light' do %>
-               <i class="fa-solid fa-house-chimney"></i>
+               <i class="fas fa-home"></i>
                Home
               <% end %>
             </li>
@@ -68,7 +68,7 @@
             <li class="nav-item">
               <%= link_to new_user_registration_path, class: 'nav-link text-light' do %>
                <i class="fa-solid fa-user-plus"></i>
-               Sin up
+               Sign up
               <% end %>
               </li>
             <li class="nav-item">
